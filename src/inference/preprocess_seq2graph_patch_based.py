@@ -71,7 +71,7 @@ class TestDataset(Dataset):
         return len(self.images)
 
     def extract_patch(self, img, bbox):
-        kernel = (64, 64)
+        kernel = (300, 300)
         min_row_bb, min_col_bb, max_row_bb, max_col_bb = bbox
         d_row = kernel[0] - (max_row_bb - min_row_bb)
         d_col = kernel[1] - (max_col_bb - min_col_bb)
@@ -224,7 +224,7 @@ class TestDataset(Dataset):
 
     def preprocess_features_w_metric_learning(self, path_to_write, dict_path):
         dict_params = torch.load(dict_path)
-        kernel = (64, 64)
+        kernel = (300, 300)
         self.min_cell = dict_params['min_all']
         self.max_cell = dict_params['max_all']
         self.roi_model = dict_params['roi']

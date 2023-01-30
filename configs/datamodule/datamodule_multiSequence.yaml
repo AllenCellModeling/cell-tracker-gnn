@@ -1,11 +1,11 @@
 _target_: src.datamodules.celltrack_datamodule_mulSeq.CellTrackDataModule
 
 data_dir: ${data_dir}  # data_dir is specified in config.yaml
-batch_size: 8
+batch_size: 32
 num_workers: 0
 pin_memory: False
-train_val_test_split: [80, 20, 0]
-sampler_type: 'from_both'
+train_val_test_split: [90, 10, 0]
+sampler_type: 'end_sec'
 
 dataset_params:
   num_frames: 10
@@ -15,12 +15,11 @@ dataset_params:
   dirs_path: # please/insert/*below*/the/sub/directory(from_home_dir)/where/CSVs/are/located
     train: # we split train,val, and test according to 'train_val_test_split' variable above and the following sequence.
       - "01"
-      - "02"
   one_hot_label: ${one_hot}
   exp_name: #Please/insert/experiment/name
   overlap: 1
   jump_frames: 1
-  mul_vals: [2, 2, 2]
+  mul_vals: [1, 1, 1]
   filter_edges: True
   directed: True
   edge_feat_embed_dict:

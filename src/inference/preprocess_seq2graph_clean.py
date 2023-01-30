@@ -191,7 +191,7 @@ class TestDataset(Dataset):
                 res2 = (result > 0) * 1.0
                 n_pixels = np.abs(res1 - res2).sum()
                 print(f"per_mask_change={per_mask_change}, per_cell_change={per_cell_change}, number of changed pixels: {n_pixels}")
-                io.imsave(result_path, result.astype(np.uint16), compress=6)
+                io.imsave(result_path, result.astype(np.uint16))
 
 
 

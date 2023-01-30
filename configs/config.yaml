@@ -3,7 +3,7 @@
 # specify here default training configuration
 defaults:
     - trainer: default_trainer.yaml # do not change
-    - model: celltrack_model_2d.yaml # can be changed
+    - model: celltrack_model_patch_based.yaml # can be changed
     - datamodule: datamodule_multiSequence.yaml # can be changed
     - callbacks: default_callbacks.yaml  # do not change
     - logger: many_loggers.yaml  # do not change
@@ -19,7 +19,7 @@ work_dir: ${hydra:runtime.cwd}
 
 
 # path to folder with data
-data_dir: ${work_dir}/data/
+data_dir: /allen/aics/assay-dev/users/Filip/Data/gnn-tracking/nucmorph_data/
 
 
 # use `python run.py debug=true` for easy debugging!

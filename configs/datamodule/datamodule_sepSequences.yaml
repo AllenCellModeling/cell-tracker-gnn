@@ -12,16 +12,15 @@ dataset_params:
   main_path:  #Please/insert/path/to/CSVs/contain/features
   dirs_path:
     train: # please/insert/*below*/the/sub/directory(from_home_dir)/where/CSVs/are/located
-      - "02"
+      - "01"
     valid:
       - "01"
     test:
-      - "01"
   one_hot_label: ${one_hot}
   exp_name: #Please/insert/experiment/name
   overlap: 1
   jump_frames: 1
-  mul_vals: [2, 2, 2]
+  mul_vals: [1, 1, 1]
   filter_edges: True
   directed: True
   edge_feat_embed_dict:
