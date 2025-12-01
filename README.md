@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> We are no longer actively maintaining this repository. All active work by the Allen Institute for Cell Science is located under the **[AllenCell](https://github.com/AllenCell)** organization.
+
 <div align="center">
 
 # Graph Neural Network for Cell Tracking in Microscopy Videos ([ECCV 2022](https://www.springerprofessional.de/graph-neural-network-for-cell-tracking-in-microscopy-videos/23632850))
